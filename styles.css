@@ -1,0 +1,106 @@
+/* Estilos básicos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente principal para todo el texto */
+    margin: 0; /* Elimina el margen por defecto del navegador */
+    padding: 0; /* Elimina el relleno por defecto del navegador */
+    background-color: #f4f4f4; /* Define un color de fondo gris claro */
+}
+
+/* Estilos básicos para el encabezado */
+header {
+    background-color: #6EBF4B; /* Establece un color de fondo verde claro */
+    color: white; /* Define el color del texto como blanco */
+    text-align: center; /* Centra el contenido dentro del encabezado */
+    padding: 1rem 0; /* Añade espacio arriba y abajo del contenido del encabezado */
+}
+
+/* Estilo para el título principal dentro del encabezado */
+h1 {
+    margin: 0; /* Elimina cualquier margen que pudiera tener el título */
+}
+
+/* Estilo básico para el logo */
+.logo {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    width: 300px; /* Define un tamaño inicial del logo en 300px */
+    display: block; /* Hace que la imagen sea un bloque para que el margen funcione correctamente */
+    margin: 0 auto; /* Centra horizontalmente el logo */
+}
+
+/* Diseño del contenedor de las tarjetas */
+.productos {
+    display: flex; /* Usa flexbox para alinear las tarjetas en filas */
+    flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente fila si no hay espacio suficiente */
+    justify-content: center; /* Centra todas las tarjetas horizontalmente */
+    gap: 20px; /* Añade un espacio de 20px entre las tarjetas */
+    padding: 20px; /* Añade un espacio de 20px alrededor del contenedor de tarjetas */
+}
+
+/* Estilo para las tarjetas individuales */
+.tarjeta {
+    background-color: white; /* Define un fondo blanco para cada tarjeta */
+    border-radius: 10px; /* Aplica bordes redondeados a las tarjetas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra suave para resaltar las tarjetas */
+    overflow: hidden; /* Evita que el contenido se desborde fuera de la tarjeta */
+    text-align: center; /* Centra el texto y contenido dentro de cada tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade una transición suave para el efecto hover */
+    flex: 1 1 calc(16.66% - 20px); /* Hace que 6 tarjetas quepan por fila (100% / 6 menos el gap) */
+    max-width: calc(16.66% - 20px); /* Limita el ancho máximo para que las tarjetas no sean más grandes de lo necesario */
+    min-width: 200px; /* Define un ancho mínimo para evitar que las tarjetas sean demasiado pequeñas */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.tarjeta img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho de la tarjeta */
+    height: auto; /* Mantiene las proporciones de las imágenes */
+}
+
+/* Efecto hover para las tarjetas */
+.tarjeta:hover {
+    transform: scale(1.05); /* Agranda la tarjeta ligeramente al pasar el ratón por encima */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Incrementa la sombra para resaltar la tarjeta */
+}
+
+/* Media queries para ajustar el diseño en pantallas más pequeñas */
+
+/* Para pantallas de hasta 1200px de ancho */
+@media (max-width: 1200px) {
+    .logo {
+        width: 250px; /* Reduce el tamaño del logo a 250px */
+    }
+    .tarjeta {
+        flex: 1 1 calc(25% - 20px); /* Ajusta las tarjetas para que quepan 4 por fila */
+        max-width: calc(25% - 20px); /* Ajusta el ancho máximo en consecuencia */
+    }
+}
+
+/* Para pantallas de hasta 900px de ancho */
+@media (max-width: 900px) {
+    .logo {
+        width: 200px; /* Reduce el tamaño del logo a 200px */
+    }
+    .tarjeta {
+        flex: 1 1 calc(33.33% - 20px); /* Ajusta las tarjetas para que quepan 3 por fila */
+        max-width: calc(33.33% - 20px); /* Ajusta el ancho máximo en consecuencia */
+    }
+}
+
+/* Para pantallas de hasta 600px de ancho */
+@media (max-width: 600px) {
+    .logo {
+        width: 150px; /* Reduce el tamaño del logo a 150px */
+    }
+    .tarjeta {
+        flex: 1 1 calc(50% - 20px); /* Ajusta las tarjetas para que quepan 2 por fila */
+        max-width: calc(50% - 20px); /* Ajusta el ancho máximo en consecuencia */
+    }
+}
+
+/* Para pantallas de hasta 400px de ancho */
+@media (max-width: 400px) {
+    .tarjeta {
+        flex: 1 1 100%; /* Ajusta las tarjetas para que ocupen toda la fila */
+        max-width: 100%; /* Asegura que las tarjetas usen todo el espacio disponible */
+    }
+}
